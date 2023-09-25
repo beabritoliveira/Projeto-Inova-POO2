@@ -5,15 +5,15 @@ const prisma = new PrismaClient()
 async function main() {
     const Aluno =[
         {
-            email: null,
+            email: "cecilia@gmail.com",
             name: "Cecilia"
         }
-        
     ]
     for(const data of Aluno){
         const aluno = await prisma.aluno.create({
-            data: data;
-        })
+            data: data,
+        });
+        console.log(aluno);
     }
 }
 
