@@ -91,6 +91,83 @@ async function main() {
         });
         console.log(aluno);
     }
+    
+     const Professor = [
+      {
+        email: "otaviolube@gmail.com",
+        name: "Otavio Lube",
+      },
+      {
+        email: "sauloribeiro@gmail.com",
+        name: "Saulo Ribeiro",
+      },
+      {
+        email: "cassiocapucho@gmail.com",
+        name: "Cassio Capucho",
+      },
+      {
+        email: "celsosoprani@gmail.com",
+        name: "Celso Soprani",
+      },
+      {
+        email: "jean-remi@gmail.com",
+        name: "Jean-Rémi Bourguet",
+      },
+      {
+        email: "gabrielalubke@gmail.com",
+        name: "Gabriela Lubke",
+      },
+      {
+        email: "marcelocamponez@gmail.com",
+        name: "Marcelo Camponez",
+      },
+      {
+        email: "viniciusmotta@gmail.com",
+        name: "Vinicius Motta",
+      },
+      {
+        email: "lucianabahiense@gmail.com",
+        name: "Luciana Bahiense",
+      },
+      {
+        email: "viniciusrosalen@gmail.com",
+        name: "Vinicius Rosalen",
+      },
+      {
+        email: "alessandrobertolani@gmail.com",
+        name: "Alessandro Bertolani",
+      },
+      {
+        email: "felipecoelho@gmail.com",
+        name: "Felipe Coelho",
+      },
+      {
+        email: "abrantesaraujo@gmail.com",
+        name: "Abrantes Araujo",
+      },
+      {
+        email: "denisrodrigues@gmail.com",
+        name: "Denis Rodrigues",
+      },
+      {
+        email: "susileaabreu@gmail.com",
+        name: "Susiléa Abreu",
+      },
+      {
+        email: "erlonpinheiro@gmail.com",
+        name: "Erlon Pinheiro",
+      },
+      {
+        email: "carlosathico@gmail.com",
+        name: "Carlos Athico",
+      },
+    ]
+    for(const data of Professor){
+        const professor = await prisma.professor.create({
+            data: data,
+        });
+        console.log(professor);
+    }
 }
 
 main()
