@@ -15,8 +15,7 @@ model Aluno {
   email String @unique
   name String
   grupo Grupo?  @relation("lideranca")
-  grupoAluno Grupo? @relation("composicao", fields: [grupo_id], references: [id]) //RELAÇÃO 1 : 1
-  grupo_id String? 
+  id_grupo AlunoGrupo[]
   //ELEMENTOS DE CONTROLE
   create_at DateTime @default(now())
   update_at DateTime @default(now())
@@ -31,23 +30,30 @@ model Professor {
   update_at DateTime @default(now())
 }
 
+model AlunoGrupo {
+  aluno Aluno @relation(fields : [idAluno], references: [id])
+  idAluno String @unique 
+  grupo Grupo @relation(fields: [idGrupo], references: [id])
+  idGrupo String 
+  @@id([idAluno, idGrupo])
+}
+
 model Grupo {
   id String @id @default(uuid()) // cria um hashmap que identifa o aluno
   name  String
-  lider Aluno @relation("lideranca", fields: [lider_id], references: [id]) //RELAÇÃO 1 : 1
-  lider_id String @unique
-  alunos Aluno[] @relation("composicao")
-  idEstande Estande? @relation(fields: [estande], references: [id])
-  estande String
-  notaGeral Float
-  idAvaliacao Avaliacao? @relation(fields: [avaliacao], references: [id])
-  avaliacao String
+  notaGeral Float?
   dataHora DateTime
+  lider_id String @unique
+  integrantes AlunoGrupo[]
+  estande Estande[]
+  avaliacao  Avaliacao[]
+  lider Aluno @relation("lideranca", fields: [lider_id], references: [id]) //RELAÇÃO 1 : 1
 }
 
 model Estande {
   id String @id @default(uuid())
-  grupo Grupo[]
+  grupo Grupo? @relation( fields: [id_grupo], references: [id])
+  id_grupo String
   dataHora DateTime
 }
 
@@ -55,5 +61,6 @@ model Avaliacao {
   id String @id @default(uuid())
   avaliador String
   nota Float
-  grupo Grupo[]
+  id_grupo String
+  grupo Grupo @relation(fields: [id_grupo], references: [id])
 }
