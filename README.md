@@ -16,8 +16,8 @@ A avaliação terá os seguintes critérios: modelo economico receberá até 1 p
 * Foi realizado a criação de uma modelagem de classe, sem a criação de nenhum metódo e somente de atributos inicialmente (apresentado no *`Diagrama Inovaweek.png`* , em forma de foto, e no *`t1.drawio`*, código da modelagem gerado pelo site do draw.io). 
 * Dessa forma foi criado as seguintes classes: *Grupo*, *Aluno*, *Avaliação*, *Professor* e *Estande*.
 * A classe Aluno_Grupo foi criada para que ligasse as tabelas do Aluno com a tabela Grupo, o que permitiria também a ampliação do projeto caso no futuro alunos possam participar de mais de um grupo, guardando assim os identificadores das respectivas classes.
-* A seguir se foi realizada a implementação da modelagem na plataforma do Visual Studio Code utilizando Prisma ORM, Typescript. Fazendo a modelação das classes no schema.prisma, localizada dentro da pasta prisma.
-* Além disso, houve-se a criação do arquivo script.ts com que permitiu o povoamento das classes dentro de uma função assíncrona que cria vetores que após serão instanciado dentro de um loop for. 
+* A seguir se foi realizada a implementação da modelagem na plataforma do Visual Studio Code utilizando Prisma ORM, Typescript. Fazendo a modelação das classes no *`schema.prisma`*, localizada dentro da pasta prisma.
+* Além disso, houve-se a criação do arquivo *`script.ts`* com que permitiu o povoamento das classes dentro de uma função assíncrona que cria vetores que após serão instanciado dentro de um loop for. 
 
 --------------------------
 referências: https://www.prisma.io/docs/getting-started/quickstart
