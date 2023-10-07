@@ -13,10 +13,11 @@ As avaliações podem ser feitas tanto por alunos,com exceção do qual está pa
 A avaliação terá os seguintes critérios: modelo economico receberá até 1 ponto, viabilidade até 2 pontos, inovação até 4 pontos, implementação e prototipação até 3 pontos e por fim a apresentação até 2 pontos. Ao final do Inova Week os grupos irão receber a nota final das avaliações dadas somente pelos professores. 
  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Implementação 
-* Foi realizado a criação de uma modelagem de classe, sem a criação de nenhum metódo e somente de atributos inicialmente (apresentado no *`Diagrama Inovaweek.png`* , em forma de foto, e no *`t1.drawio`*, código da modelagem gerado pelo site do draw.io). Tomando como base o texto:
-* "Um berçário deseja informatizar suas operações. Quando um bebê nasce, algumas informações são armazenadas sobre ele, tais como: nome, data do nascimento, peso do nascimento, altura, a mãe deste bebê e o médico que fez seu parto. Para as mães, o berçário também deseja manter um controle, guardando informações como: nome, endereço, telefone e data de nascimento. Para os médicos, é importante saber: CRM, nome, telefone celular e especialidade."
+* Foi realizado a criação de uma modelagem de classe, sem a criação de nenhum metódo e somente de atributos inicialmente (apresentado no *`Diagrama Inovaweek.png`* , em forma de foto, e no *`t1.drawio`*, código da modelagem gerado pelo site do draw.io). 
 * Dessa forma foi criado as seguintes classes: *Grupo*, *Aluno*, *Avaliação*, *Professor* e *Estande*.
-* A classe Aluno_Grupo foi criada para que ligasse as tabelas do Aluno com a tabela Grupo, o que permitiria também a ampliação do projeto caso no futuro alunos possam participar de mais de um grupo,
+* A classe Aluno_Grupo foi criada para que ligasse as tabelas do Aluno com a tabela Grupo, o que permitiria também a ampliação do projeto caso no futuro alunos possam participar de mais de um grupo, guardando assim os identificadores das respectivas classes.
+* A seguir se foi realizada a implementação da modelagem na plataforma do Visual Studio Code utilizando Prisma ORM, Typescript. Fazendo a modelação das classes no schema.prisma, localizada dentro da pasta prisma.
+* Além disso, houve-se a criação do arquivo script.ts com que permitiu o povoamento das classes dentro de uma função assíncrona que cria vetores que após serão instanciado dentro de um loop for. 
 
 --------------------------
 referências: https://www.prisma.io/docs/getting-started/quickstart
