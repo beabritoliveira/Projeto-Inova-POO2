@@ -299,8 +299,66 @@ async function main() {
         });
         console.log(aluno);
     }
+
+  const Estande =[
+{
+  grupo: "Refugee Care",
+  dataHora: "2023-09-12T08:00:00-01:00"
+},
+{
+  grupo:"Patinhas Solidarias ",
+  dataHora: "2023-09-13T08:00:00-01:00"
+},
+{
+  grupo:"White Horse",
+  dataHora: "2023-09-14T08:00:00-01:00"
+},
+{
+  grupo: "Hope Harbor",
+  dataHora: "2023-09-12T08:00:00-01:00"
+},
+]
+
+for(const data of Estande){
+const estande = await prisma.estande.create({
+data: data,
+});
+console.log(estande);
+}
+
+  const Avaliacao =[
+{
+  avaliador: "Otavio Lube",
+  nota: "2.0",
+  grupo: "Refugee Care"
+},
+{
+  avaliador: "Cassio Capucho",
+  nota: "1.8",
+  grupo: "Patinhas Solidárias",
+},
+{
+   avaliador: "Celso Soprani",
+   nota: "1.5",
+   grupo: "White Horse"
+},
+{
+   avaliador: "Gabriela Lubke",
+   nota: "2.0",
+   grupo: "Hope Harbor"
+},
+]
+
+for(const data of Avaliacao){
+const avaliacao = await prisma.avaliacao.create({
+data: data,
+});
+console.log(avaliacao);
+}
   
 }
+
+
 
 main()
   .then(async () => {
