@@ -292,7 +292,6 @@ async function main() {
             idGrupo: "eb03e496-0494-4666-aa1a-6df47a7e3ea1"
         },
     ]
-
     for(const data of Atribuindo_Alunos){
         const aluno = await prisma.alunoGrupo.create({
             data: data,
@@ -301,21 +300,23 @@ async function main() {
     }
 
   const Estande =[
-{
-  grupo: "Refugee Care",
-  dataHora: "2023-09-12T08:00:00-01:00"
+{//"Refugee Care"
+  id_grupo: "058ae67c-1aa5-4dc0-ae93-8e4ee755ddc2",
+  dataHora: "2023-09-12T08:00:00-01:00",
+
 },
-{
-  grupo:"Patinhas Solidarias ",
+{//"Patinhas Solidárias"
+  id_grupo:"3fcee9a3-04b1-402b-b777-710e42ba3b7b",
   dataHora: "2023-09-13T08:00:00-01:00"
 },
-{
-  grupo:"White Horse",
+{//"White Horse"
+  id_grupo:"69fe611c-a594-490a-b40e-63ca845e9b44",
   dataHora: "2023-09-14T08:00:00-01:00"
 },
-{
-  grupo: "Hope Harbor",
+{//"Hope Harbor"
+  id_grupo: "eb03e496-0494-4666-aa1a-6df47a7e3ea1",
   dataHora: "2023-09-12T08:00:00-01:00"
+
 },
 ]
 
@@ -323,35 +324,40 @@ for(const data of Estande){
 const estande = await prisma.estande.create({
 data: data,
 });
+
 console.log(estande);
 }
 
   const Avaliacao =[
 {
   avaliador: "Otavio Lube",
-  nota: "2.0",
-  grupo: "Refugee Care"
+  nota: 2.0,
+  id_grupo: "058ae67c-1aa5-4dc0-ae93-8e4ee755ddc2"
+  //"Refugee Care"
 },
 {
   avaliador: "Cassio Capucho",
-  nota: "1.8",
-  grupo: "Patinhas Solidárias",
+  nota: 1.8,
+  id_grupo:"3fcee9a3-04b1-402b-b777-710e42ba3b7b"
+  //"Patinhas Solidárias"
 },
 {
    avaliador: "Celso Soprani",
-   nota: "1.5",
-   grupo: "White Horse"
+   nota: 1.5,
+   id_grupo: "69fe611c-a594-490a-b40e-63ca845e9b44"
+   //"White Horse"
 },
 {
    avaliador: "Gabriela Lubke",
-   nota: "2.0",
-   grupo: "Hope Harbor"
+   nota: 2.0,
+   id_grupo: "eb03e496-0494-4666-aa1a-6df47a7e3ea1"
+   //"Hope Harbor"
 },
 ]
 
 for(const data of Avaliacao){
-const avaliacao = await prisma.avaliacao.create({
-data: data,
+    const avaliacao = await prisma.avaliacao.create({
+    data: data,
 });
 console.log(avaliacao);
 }
