@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Aluno {
+  id String @id @default(uuid()) // cria um hashmap que identifa o aluno
+  email String @unique
+  name String
+  grupo Grupo?  @relation("lideranca")
+  id_grupo AlunoGrupo[]
+  //ELEMENTOS DE CONTROLE
+  create_at DateTime @default(now())
+  update_at DateTime @default(now())
+}
+
+model Professor {
+  id String @id @default(uuid()) // cria um hashmap que identifa o aluno
+  email String @unique
+  name String
+  //ELEMENTOS DE CONTROLE
+  create_at DateTime @default(now())
+  update_at DateTime @default(now())
+}
+
+model AlunoGrupo {
+  aluno Aluno @relation(fields : [idAluno], references: [id])
+  idAluno String @unique 
+  grupo Grupo @relation(fields: [idGrupo], references: [id])
+  idGrupo String 
+  @@id([idAluno, idGrupo])
+}
+
+model Grupo {
+  id String @id @default(uuid()) // cria um hashmap que identifa o aluno
+  name  String
+  notaGeral Float?
+  dataHora DateTime
+  lider_id String @unique
+  integrantes AlunoGrupo[]
+  estande Estande[]
+  avaliacao  Avaliacao[]
+  lider Aluno @relation("lideranca", fields: [lider_id], references: [id]) //RELAÇÃO 1 : 1
+}
+
+model Estande {
+  id String @id @default(uuid())
+  grupo Grupo? @relation( fields: [id_grupo], references: [id])
+  id_grupo String
+  dataHora DateTime
+}
+
+model Avaliacao {
+  id String @id @default(uuid())
+  avaliador String
+  nota Float
+  id_grupo String
+  grupo Grupo @relation(fields: [id_grupo], references: [id])
+}
