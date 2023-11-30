@@ -1,14 +1,26 @@
-import express from 'express'
+import express from 'express';
+import MainRouter from './routes/MainRoute';
+import AlunoRouter from './routes/AlunoRoute';
+import AvaliacaoRouter from './routes/AvaliacaoRoute';
+import EstandeRouter from './routes/EstandeRoute';
+import GrupoRouter from './routes/GrupoRoute';
+import ProfessorRouter from './routes/ProfessorRoute';
 
-const app = express()
-
-app.use(express.json())
-app.get('/', function(req, res){
-    res.send('OK!')
-})
-
+const app = express();
 const port = 3000
 
+app.use(express.json());
+app.set('view engine', 'ejs')
+app.set('views', './src/views')
+
+app.use(MainRouter);
+app.use(AlunoRouter);
+app.use(AvaliacaoRouter);
+app.use(EstandeRouter);
+app.use(GrupoRouter);
+app.use(ProfessorRouter);
+
+
 app.listen(port, function(){
-    console.log('Server running on port ${port}')
+    console.log('Servidor rodando na porta ${port}');
 })
