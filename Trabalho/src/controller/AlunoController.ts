@@ -26,7 +26,7 @@ class AlunoController {
     async listAluno(req: Request, res: Response){
         const alunos = AlunoServices.listAluno()
 
-        res.render('home', {alunos: alunos})
+        res.render('alunos', {alunos: alunos})
     }
 
     async updateAluno(req: Request, res: Response){
