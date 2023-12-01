@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includes EJS</title>
+</head>
+    <style>
+        .menu-item{
+            display: inline;
+            margin: 0 10px 0 10px;
+        }
+        p.a {
+        padding-top: 40px;
+        text-align: center;
+        font-size: xx-large;
+        }
+  </style>
+</head>
+
+<body>
+  <header>
+    <section>
+      <p class=a>Listagem de Estande</p>
+    </section>
+  </header>
+
+  <main>
+    <div>
+      <section>
+        <table 
+        width="90%" border="1px" bgcolor="lightblue" bordercolor="white" cellpadding="10" align="center"
+        >
+            <thead>
+              <tr>
+                <th width="40%">ID_Estande</th>
+                <th width="40%">ID_Grupo</th>
+                <th width="20%">Data e Hora</th>
+              </tr>
+            </thead>
+          <tbody bgcolor="white" align="center" >
+              <% for(var i=0; i< estande.length; i++) {%>  
+              <tr >
+                    <td><%=estande[i].id %></td>
+                    <td><%=estande[i].id_grupo %></td>
+                    <td><%=estande[i].dataHora %></td>
+              </tr>
+              <% } %>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <h6>Trabalho POO2</h6>
+  </footer>
+</body>
+
+</html>
