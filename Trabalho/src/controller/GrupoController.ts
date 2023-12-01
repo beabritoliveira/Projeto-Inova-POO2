@@ -26,7 +26,7 @@ class GrupoController {
     async listGrupo(req: Request, res: Response){
         const grupo = GrupoServices.listGrupo()
 
-        res.render('home', {grupo: grupo})
+        res.render('grupos', {grupo: grupo})
     }
 
     async updateGrupo(req: Request, res: Response){
