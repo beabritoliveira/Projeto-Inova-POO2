@@ -23,3 +23,5 @@ A avaliação terá os seguintes critérios: modelo economico receberá até 1 p
 referências: https://www.prisma.io/docs/getting-started/quickstart
 https://www.prisma.io/docs/concepts/components/prisma-migrate/migrate-development-production
 https://cursos.alura.com.br/forum/topico-alternativa-ao-touch-para-usuarios-de-windows-246074
+https://www.npmjs.com/package/@types/express
+https://ejs.co/#promo
