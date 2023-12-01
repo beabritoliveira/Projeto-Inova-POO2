@@ -17,8 +17,8 @@ class AlunoServices {
                 });
                 return aluno
             }else{
-                const maes = await prisma.aluno.findMany();
-                return maes
+                const alunos = await prisma.aluno.findMany();
+                return alunos
             }
         }catch(error){
             console.log(error);
