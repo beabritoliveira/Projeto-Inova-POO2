@@ -26,7 +26,7 @@ class EstandeController {
     async listEstande(req: Request, res: Response){
         const estande = EstandeServices.listEstande()
 
-        res.render('home', {estande: estande})
+        res.render('estandes', {estande: estande})
     }
 
     async updateEstande(req: Request, res: Response){
