@@ -7,11 +7,11 @@ import GrupoRouter from './routes/GrupoRoute';
 import ProfessorRouter from './routes/ProfessorRoute';
 
 const app = express();
-const port = 3000
+const port = 3000;
 
 app.use(express.json());
-app.set('view engine', 'ejs')
-app.set('views', './src/views')
+app.set('view engine', 'ejs');
+app.set('views', './src/views');
 
 app.use(MainRouter);
 app.use(AlunoRouter);

@@ -24,8 +24,8 @@ class AvaliacaoController {
     }
 
     async listAvaliacao(req: Request, res: Response){
-        const avaliacao = AvaliacaoServices.listAvaliacao
-        res.render('home', {avaliacao: avaliacao})
+        const avaliacao = await AvaliacaoServices.listAvaliacao()
+        res.render('avaliacoes', {avaliacao:avaliacao})
     }
 
     async updateAvaliacao(req: Request, res: Response){

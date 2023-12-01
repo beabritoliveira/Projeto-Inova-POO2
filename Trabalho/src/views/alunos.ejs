@@ -17,6 +17,10 @@
         text-align: center;
         font-size: xx-large;
         }
+        .btn {
+          width: 90px;
+          height: 20px;
+        }
   </style>
 </head>
 
@@ -44,6 +48,10 @@
               <tr >
                     <td><%= alunos[i].email %></td>
                     <td><%= alunos[i].name %></td>
+                    <td>
+                      <button class="btn"><i class="fa fa-user-times">Update</i></button>
+                      <button class="btn"><i class="fa fa-user-secret">Delete</i></button>
+                  </td>
               </tr>
             <% } %>
           </tbody>
@@ -51,10 +59,6 @@
       </section>
     </div>
   </main>
-
-  <footer>
-    <h6>Trabalho POO2</h6>
-  </footer>
 </body>
 
 </html>

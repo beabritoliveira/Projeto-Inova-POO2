@@ -3,6 +3,6 @@ import EstandeController from "../controller/EstandeController";
 
 const EstandeRouter = Router();
 
-EstandeRouter.get('/estande', EstandeController.listEstande);
+EstandeRouter.get('/estandes', EstandeController.listEstande);
 
 export default EstandeRouter;

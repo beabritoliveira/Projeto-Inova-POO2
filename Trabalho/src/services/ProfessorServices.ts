@@ -1,6 +1,5 @@
 import { Prisma, PrismaClient } from '@prisma/client';
 import 'express'
-
 const prisma = new PrismaClient();
 
 class ProfessorServices {

@@ -3,6 +3,6 @@ import AvaliacaoController from "../controller/AvaliacaoController";
 
 const AvaliacaoRouter = Router();
 
-AvaliacaoRouter.get('/avaliacao', AvaliacaoController.listAvaliacao);
+AvaliacaoRouter.get('/avaliacoes', AvaliacaoController.listAvaliacao);
 
 export default AvaliacaoRouter;

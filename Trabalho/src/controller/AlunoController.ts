@@ -24,8 +24,8 @@ class AlunoController {
     }
 
     async listAluno(req: Request, res: Response){
-        const alunos = AlunoServices.listAluno()
-        res.render('home', {alunos: alunos})
+        const alunos = await AlunoServices.listAluno()
+        res.render('alunos', {alunos:alunos})
     }
 
     async updateAluno(req: Request, res: Response){

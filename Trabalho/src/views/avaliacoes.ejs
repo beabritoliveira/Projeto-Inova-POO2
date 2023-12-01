@@ -17,6 +17,10 @@
         text-align: center;
         font-size: xx-large;
         }
+        .btn {
+          width: 90px;
+          height: 20px;
+        }
   </style>
 </head>
 
@@ -46,6 +50,10 @@
                     <td><%= avaliacao[i].id_grupo %></td>
                     <td><%= avaliacao[i].avaliador %></td>
                     <td><%= avaliacao[i].nota %></td>
+                    <td>
+                      <button class="btn"><i class="fa fa-user-times">Update</i></button>
+                      <button class="btn"><i class="fa fa-user-secret">Delete</i></button>
+                  </td>
               </tr>
               <% } %>
           </tbody>
@@ -53,10 +61,6 @@
       </section>
     </div>
   </main>
-
-  <footer>
-    <h6>Trabalho POO2</h6>
-  </footer>
 </body>
 
 </html>

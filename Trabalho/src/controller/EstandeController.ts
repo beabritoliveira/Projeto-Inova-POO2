@@ -23,19 +23,20 @@ class EstandeController {
 
     }
 
-    async listEstande(req: Request, res: Response){
-        const estande = EstandeServices.listEstande()
-        res.render('home', {estande: estande})
+    async listEstande(req: Request, res: Response){ 
+        const estande = await EstandeServices.listEstande()
+        if(estande != null){
+            res.render('estandes', {estande: estande})
+        }
+        
     }
 
     async updateEstande(req: Request, res: Response){
-        const estande = EstandeServices.updateEstande
-        res.render('Update estande', {estande: estande});
+        res.send('Update estande');
     }
 
     async deleteEstande(req: Request, res: Response){
-        const estande = EstandeServices.deleteEstande
-        res.render('Delete estande', {estande: estande});
+        res.send('Delete estande');
     }
 }
 
