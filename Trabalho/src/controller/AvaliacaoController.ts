@@ -26,7 +26,7 @@ class AvaliacaoController {
     async listAvaliacao(req: Request, res: Response){
         const avaliacao = AvaliacaoServices.listAvaliacao
 
-        res.render('home', {avaliacao: avaliacao})
+        res.render('avaliacoes', {avaliacao: avaliacao})
     }
 
     async updateAvaliacao(req: Request, res: Response){
