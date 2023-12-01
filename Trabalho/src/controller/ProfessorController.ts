@@ -30,7 +30,7 @@ class ProfessorController {
 
     async updateProfessor(req: Request, res: Response){
         const professor = ProfessorServices.updateProfessor
-        res.render('Delete professor', {professor: professor});
+        res.render('Update professor', {professor: professor});
     }
 
     async deleteProfessor(req: Request, res: Response){
