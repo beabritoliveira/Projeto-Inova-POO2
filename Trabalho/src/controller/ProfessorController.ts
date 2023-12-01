@@ -26,7 +26,7 @@ class ProfessorController {
     async listProfessor(req: Request, res: Response){
         const grupo = ProfessorServices.listProfessor()
 
-        res.render('home', {grupo: grupo})
+        res.render('professores', {grupo: grupo})
     }
 
     async updateProfessor(req: Request, res: Response){
