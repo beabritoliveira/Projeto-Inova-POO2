@@ -4,6 +4,7 @@
 #### Professor: Otavio Lube dos Santos
 #### Turma: CC4MB
 #### Link para o vídeo no youtube: https://youtu.be/z-sJWieBrmU
+##### Caso for preciso segue o link do onedrive: https://photos.onedrive.com/share/E316CE2C04635F94!13405?cid=E316CE2C04635F94&resId=E316CE2C04635F94!13405&authkey=!AOMvxXY7EvWL3Sg&ithint=video
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  ### Contextualzação / Minimundo
 * O Inova Week é um projeto de inovação feito pela universidade vila velha, que tem como principal objetivo promover que os alunos vendam suas ideias criativas.
