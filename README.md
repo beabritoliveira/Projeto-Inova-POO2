@@ -3,6 +3,7 @@
 #### Alunas: Beatriz Brito Oliveira, Cecilia de Jesus Barros, Maria Luiza Souza Pinheiro, Sthefany Sobrinho Ferreira Alves
 #### Professor: Otavio Lube dos Santos
 #### Turma: CC4MB
+#### Link para o vídeo no youtube: https://youtu.be/z-sJWieBrmU
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  ### Contextualzação / Minimundo
 * O Inova Week é um projeto de inovação feito pela universidade vila velha, que tem como principal objetivo promover que os alunos vendam suas ideias criativas.
